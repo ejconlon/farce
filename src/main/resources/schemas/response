@@ -1,6 +1,6 @@
 {
   "$schema": "http://exathunk.net/schemas/schema",
-  "id": "http://exathunk.net/schemas/farce/response",
+  "id": "http://exathunk.net/farce/schemas/response",
   "type": "object",
 
   "required": ["code"],
@@ -11,11 +11,11 @@
     },
 
     "headers": {
-      "$ref": "http://exathunk.net/schemas/farce/headers"
+      "$ref": "http://exathunk.net/farce/schemas/headers"
     },
 
-    "schema": {
-      "$ref": "http://exathunk.net/schemas/schema"
+    "schemaref": {
+      "$ref": "http://exathunk.net/farce/schemas/schemaref"
     }
   }
 }

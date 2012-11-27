@@ -1,9 +1,9 @@
 {
   "$schema": "http://exathunk.net/schemas/schema",
-  "id": "http://exathunk.net/schemas/farce/endpoint",
+  "id": "http://exathunk.net/farce/schemas/endpoint",
   "type": "object",
 
-  "required" : ["request", "response"],
+  "required" : ["request", "responses"],
 
   "properties": {
     "description": {
@@ -11,13 +11,13 @@
     },
 
     "request": {
-      "$ref": "http://exathunk.net/schemas/farce/request"
+      "$ref": "http://exathunk.net/farce/schemas/request"
     },
 
     "responses": {
       "type": "array",
       "items": {
-        "$ref": "http://exathunk.net/schemas/farce/response"
+        "$ref": "http://exathunk.net/farce/schemas/response"
       }
     }
   }

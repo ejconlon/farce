@@ -1,6 +1,6 @@
 {
   "$schema": "http://exathunk.net/schemas/schema",
-  "id": "http://exathunk.net/schemas/farce/match",
+  "id": "http://exathunk.net/farce/schemas/match",
   "type": "object",
 
   "required": ["path"],
@@ -17,8 +17,8 @@
       }
     },
 
-    "schema" : {
-      "$ref": "http://exathunk.net/schemas/schema"
+    "schemaref" : {
+      "$ref": "http://exathunk.net/farce/schemas/schemaref"
     }
   }
 }

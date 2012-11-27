@@ -5,8 +5,8 @@ import java.util.Set;
 import java.util.TreeSet;
 import net.exathunk.farce.genschema.headers.Headers;
 import net.exathunk.farce.genschema.headers.HeadersLike;
-import net.exathunk.farce.genschema.schema.Schema;
-import net.exathunk.farce.genschema.schema.SchemaLike;
+import net.exathunk.farce.genschema.schemaref.Schemaref;
+import net.exathunk.farce.genschema.schemaref.SchemarefLike;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonDeserialize;
 
@@ -30,13 +30,13 @@ public interface ResponseLike {
     @JsonDeserialize(as = Headers.class)
     void setHeaders(HeadersLike headers);
 
-    boolean hasSchema();
+    boolean hasSchemaref();
 
-    @JsonProperty("schema")
-    SchemaLike getSchema();
+    @JsonProperty("schemaref")
+    SchemarefLike getSchemaref();
 
-    @JsonProperty("schema")
-    @JsonDeserialize(as = Schema.class)
-    void setSchema(SchemaLike schema);
+    @JsonProperty("schemaref")
+    @JsonDeserialize(as = Schemaref.class)
+    void setSchemaref(SchemarefLike schemaref);
 
 }

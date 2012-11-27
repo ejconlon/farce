@@ -5,8 +5,8 @@ import java.util.Set;
 import java.util.TreeSet;
 import net.exathunk.farce.genschema.headers.Headers;
 import net.exathunk.farce.genschema.headers.HeadersLike;
-import net.exathunk.farce.genschema.schema.Schema;
-import net.exathunk.farce.genschema.schema.SchemaLike;
+import net.exathunk.farce.genschema.schemaref.Schemaref;
+import net.exathunk.farce.genschema.schemaref.SchemarefLike;
 
 public class Response implements Cloneable, Serializable, ResponseLike {
 
@@ -14,7 +14,7 @@ public class Response implements Cloneable, Serializable, ResponseLike {
 
     private HeadersLike headers;
 
-    private SchemaLike schema;
+    private SchemarefLike schemaref;
 
     @Override
     public boolean hasCode() {
@@ -47,18 +47,18 @@ public class Response implements Cloneable, Serializable, ResponseLike {
     }
 
     @Override
-    public boolean hasSchema() {
-        return null != schema;
+    public boolean hasSchemaref() {
+        return null != schemaref;
     }
 
     @Override
-    public SchemaLike getSchema() {
-        return schema;
+    public SchemarefLike getSchemaref() {
+        return schemaref;
     }
 
     @Override
-    public void setSchema(SchemaLike schema) {
-        this.schema = schema;
+    public void setSchemaref(SchemarefLike schemaref) {
+        this.schemaref = schemaref;
     }
 
     @Override
@@ -66,7 +66,7 @@ public class Response implements Cloneable, Serializable, ResponseLike {
         StringBuilder sb = new StringBuilder("Response{ ");
         if (code != null) sb.append("code='").append(code).append("', ");
         if (headers != null) sb.append("headers='").append(headers).append("', ");
-        if (schema != null) sb.append("schema='").append(schema).append("', ");
+        if (schemaref != null) sb.append("schemaref='").append(schemaref).append("', ");
         return sb.append("}").toString();
     }
 
@@ -79,8 +79,8 @@ public class Response implements Cloneable, Serializable, ResponseLike {
             else if (!code.equals(other.getCode())) { return false; }
             if (headers == null) { if (other.hasHeaders()) { return false; } }
             else if (!headers.equals(other.getHeaders())) { return false; }
-            if (schema == null) { if (other.hasSchema()) { return false; } }
-            else if (!schema.equals(other.getSchema())) { return false; }
+            if (schemaref == null) { if (other.hasSchemaref()) { return false; } }
+            else if (!schemaref.equals(other.getSchemaref())) { return false; }
             return true;
         } else {
             return false;
@@ -92,7 +92,7 @@ public class Response implements Cloneable, Serializable, ResponseLike {
         int result = 0;
         result = 31 * result + (code == null ? 0 : code.hashCode());
         result = 31 * result + (headers == null ? 0 : headers.hashCode());
-        result = 31 * result + (schema == null ? 0 : schema.hashCode());
+        result = 31 * result + (schemaref == null ? 0 : schemaref.hashCode());
         return result;
     }
 
@@ -102,8 +102,8 @@ public class Response implements Cloneable, Serializable, ResponseLike {
             else if (!code.equals(other.getCode())) { s.add("code"); }
             if (headers == null) { if (other == null || other.hasHeaders()) { s.add("headers"); } }
             else if (!headers.equals(other.getHeaders())) { s.add("headers"); }
-            if (schema == null) { if (other == null || other.hasSchema()) { s.add("schema"); } }
-            else if (!schema.equals(other.getSchema())) { s.add("schema"); }
+            if (schemaref == null) { if (other == null || other.hasSchemaref()) { s.add("schemaref"); } }
+            else if (!schemaref.equals(other.getSchemaref())) { s.add("schemaref"); }
             return s;
     }
 

@@ -1,11 +1,11 @@
 package net.exathunk.farce.genschema.headers;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-import net.exathunk.farce.genschema.headers.declarations.keyvaluepair.KeyValuePair;
-import net.exathunk.farce.genschema.headers.declarations.keyvaluepair.KeyValuePairLike;
+import java.util.Map;
+import java.util.TreeMap;
+import net.exathunk.farce.genschema.match.Match;
+import net.exathunk.farce.genschema.match.MatchLike;
 
-public class Headers extends ArrayList<KeyValuePairLike> implements Cloneable, Serializable, HeadersLike {
+public class Headers extends TreeMap<String, MatchLike> implements Cloneable, Serializable, HeadersLike {
 
 }

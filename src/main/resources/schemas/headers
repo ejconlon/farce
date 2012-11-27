@@ -1,24 +1,9 @@
 {
   "$schema": "http://exathunk.net/schemas/schema",
-  "id": "http://exathunk.net/schemas/farce/headers",
-  "type": "array",
-
-  "declarations": {
-    "keyValuePair" : {
-      "type": "object",
-      "required": ["key", "value"],
-      "properties": {
-        "key": {
-          "type": "string"
-        },
-        "value": {
-          "$ref": "http://exathunk.net/schemas/farce/match"
-        }
-      }
-    }
-  },
+  "id": "http://exathunk.net/farce/schemas/headers",
+  "type": "object",
 
   "items": {
-    "$ref": "#/declarations/keyValuePair"
+    "$ref": "http://exathunk.net/farce/schemas/match"
   }
 }

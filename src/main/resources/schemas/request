@@ -1,6 +1,6 @@
 {
   "$schema": "http://exathunk.net/schemas/schema",
-  "id": "http://exathunk.net/schemas/farce/request",
+  "id": "http://exathunk.net/farce/schemas/request",
   "type": "object",
 
   "required": ["method", "match"],
@@ -11,15 +11,15 @@
     },
 
     "match": {
-      "$ref": "http://exathunk.net/schemas/farce/match"
+      "$ref": "http://exathunk.net/farce/schemas/match"
     },
 
     "headers": {
-      "$ref": "http://exathunk.net/schemas/farce/headers"
+      "$ref": "http://exathunk.net/farce/schemas/headers"
     },
 
-    "schema": {
-      "$ref": "http://exathunk.net/schemas/schema"
+    "schemaref": {
+      "$ref": "http://exathunk.net/farce/schemas/schemaref"
     }
   }
 }

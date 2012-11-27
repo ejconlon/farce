@@ -1,0 +1,23 @@
+{
+  "$schema": "http://exathunk.net/schemas/schema",
+  "id": "http://exathunk.net/farce/schemas/schemaref",
+  "type": "object",
+
+  "description": "Either<Ref, Schema> for instances",
+
+  "required": ["ref", "schema"],
+  "forbids": {
+    "ref": ["schema"],
+    "schema": ["ref"]
+  },
+
+  "properties": {
+    "ref": {
+      "type": "string"
+    },
+
+    "schema": {
+      "$ref": "http://exathunk.net/schemas/schema"
+    }
+  }
+}
