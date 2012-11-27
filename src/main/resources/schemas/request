@@ -1,0 +1,25 @@
+{
+  "$schema": "http://exathunk.net/schemas/schema",
+  "id": "http://exathunk.net/schemas/farce/request",
+  "type": "object",
+
+  "required": ["method", "match"],
+
+  "properties": {
+    "method": {
+      "type": "string"
+    },
+
+    "match": {
+      "$ref": "http://exathunk.net/schemas/farce/match"
+    },
+
+    "headers": {
+      "$ref": "http://exathunk.net/schemas/farce/headers"
+    },
+
+    "schema": {
+      "$ref": "http://exathunk.net/schemas/schema"
+    }
+  }
+}

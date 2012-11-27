@@ -1,0 +1,24 @@
+{
+  "$schema": "http://exathunk.net/schemas/schema",
+  "id": "http://exathunk.net/schemas/farce/endpoint",
+  "type": "object",
+
+  "required" : ["request", "response"],
+
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+
+    "request": {
+      "$ref": "http://exathunk.net/schemas/farce/request"
+    },
+
+    "responses": {
+      "type": "array",
+      "items": {
+        "$ref": "http://exathunk.net/schemas/farce/response"
+      }
+    }
+  }
+}

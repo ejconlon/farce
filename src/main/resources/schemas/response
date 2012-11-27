@@ -1,0 +1,21 @@
+{
+  "$schema": "http://exathunk.net/schemas/schema",
+  "id": "http://exathunk.net/schemas/farce/response",
+  "type": "object",
+
+  "required": ["code"],
+
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+
+    "headers": {
+      "$ref": "http://exathunk.net/schemas/farce/headers"
+    },
+
+    "schema": {
+      "$ref": "http://exathunk.net/schemas/schema"
+    }
+  }
+}

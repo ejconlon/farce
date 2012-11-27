@@ -1,0 +1,24 @@
+{
+  "$schema": "http://exathunk.net/schemas/schema",
+  "id": "http://exathunk.net/schemas/farce/match",
+  "type": "object",
+
+  "required": ["path"],
+
+  "properties": {
+    "path": {
+      "type": "string"
+    },
+
+    "substitutions": {
+      "type": "object",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "schema" : {
+      "$ref": "http://exathunk.net/schemas/schema"
+    }
+  }
+}

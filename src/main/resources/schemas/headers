@@ -1,0 +1,24 @@
+{
+  "$schema": "http://exathunk.net/schemas/schema",
+  "id": "http://exathunk.net/schemas/farce/headers",
+  "type": "array",
+
+  "declarations": {
+    "keyValuePair" : {
+      "type": "object",
+      "required": ["key", "value"],
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "$ref": "http://exathunk.net/schemas/farce/match"
+        }
+      }
+    }
+  },
+
+  "items": {
+    "$ref": "#/declarations/keyValuePair"
+  }
+}
