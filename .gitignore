@@ -1,0 +1,17 @@
+*.class
+*.iml
+.idea/*
+*~
+*.swo
+*.swp
+*.bak
+*.log
+*.tmp
+
+target/*
+out/*
+
+# Package Files #
+*.jar
+*.war
+*.ear
