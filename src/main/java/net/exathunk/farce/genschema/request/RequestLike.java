@@ -1,14 +1,11 @@
 package net.exathunk.farce.genschema.request;
 
-import java.io.Serializable;
-import java.util.Set;
-import java.util.TreeSet;
 import net.exathunk.farce.genschema.headers.Headers;
 import net.exathunk.farce.genschema.headers.HeadersLike;
 import net.exathunk.farce.genschema.match.Match;
 import net.exathunk.farce.genschema.match.MatchLike;
-import net.exathunk.farce.genschema.schemaref.Schemaref;
-import net.exathunk.farce.genschema.schemaref.SchemarefLike;
+import net.exathunk.farce.genschema.schema.Schema;
+import net.exathunk.farce.genschema.schema.SchemaLike;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonDeserialize;
 
@@ -41,13 +38,13 @@ public interface RequestLike {
     @JsonProperty("method")
     void setMethod(String method);
 
-    boolean hasSchemaref();
+    boolean hasSchema();
 
-    @JsonProperty("schemaref")
-    SchemarefLike getSchemaref();
+    @JsonProperty("schema")
+    SchemaLike getSchema();
 
-    @JsonProperty("schemaref")
-    @JsonDeserialize(as = Schemaref.class)
-    void setSchemaref(SchemarefLike schemaref);
+    @JsonProperty("schema")
+    @JsonDeserialize(as = Schema.class)
+    void setSchema(SchemaLike schema);
 
 }

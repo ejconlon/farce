@@ -14,8 +14,8 @@
       "$ref": "http://exathunk.net/farce/schemas/headers"
     },
 
-    "schemaref": {
-      "$ref": "http://exathunk.net/farce/schemas/schemaref"
+    "schema": {
+      "$ref": "http://exathunk.net/schemas/schema"
     }
   }
 }

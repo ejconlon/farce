@@ -7,8 +7,8 @@ import net.exathunk.farce.genschema.headers.Headers;
 import net.exathunk.farce.genschema.headers.HeadersLike;
 import net.exathunk.farce.genschema.match.Match;
 import net.exathunk.farce.genschema.match.MatchLike;
-import net.exathunk.farce.genschema.schemaref.Schemaref;
-import net.exathunk.farce.genschema.schemaref.SchemarefLike;
+import net.exathunk.farce.genschema.schema.Schema;
+import net.exathunk.farce.genschema.schema.SchemaLike;
 
 public class Request implements Cloneable, Serializable, RequestLike {
 
@@ -18,7 +18,7 @@ public class Request implements Cloneable, Serializable, RequestLike {
 
     private String method;
 
-    private SchemarefLike schemaref;
+    private SchemaLike schema;
 
     @Override
     public boolean hasHeaders() {
@@ -66,18 +66,18 @@ public class Request implements Cloneable, Serializable, RequestLike {
     }
 
     @Override
-    public boolean hasSchemaref() {
-        return null != schemaref;
+    public boolean hasSchema() {
+        return null != schema;
     }
 
     @Override
-    public SchemarefLike getSchemaref() {
-        return schemaref;
+    public SchemaLike getSchema() {
+        return schema;
     }
 
     @Override
-    public void setSchemaref(SchemarefLike schemaref) {
-        this.schemaref = schemaref;
+    public void setSchema(SchemaLike schema) {
+        this.schema = schema;
     }
 
     @Override
@@ -86,7 +86,7 @@ public class Request implements Cloneable, Serializable, RequestLike {
         if (headers != null) sb.append("headers='").append(headers).append("', ");
         if (match != null) sb.append("match='").append(match).append("', ");
         if (method != null) sb.append("method='").append(method).append("', ");
-        if (schemaref != null) sb.append("schemaref='").append(schemaref).append("', ");
+        if (schema != null) sb.append("schema='").append(schema).append("', ");
         return sb.append("}").toString();
     }
 
@@ -101,8 +101,8 @@ public class Request implements Cloneable, Serializable, RequestLike {
             else if (!match.equals(other.getMatch())) { return false; }
             if (method == null) { if (other.hasMethod()) { return false; } }
             else if (!method.equals(other.getMethod())) { return false; }
-            if (schemaref == null) { if (other.hasSchemaref()) { return false; } }
-            else if (!schemaref.equals(other.getSchemaref())) { return false; }
+            if (schema == null) { if (other.hasSchema()) { return false; } }
+            else if (!schema.equals(other.getSchema())) { return false; }
             return true;
         } else {
             return false;
@@ -115,7 +115,7 @@ public class Request implements Cloneable, Serializable, RequestLike {
         result = 31 * result + (headers == null ? 0 : headers.hashCode());
         result = 31 * result + (match == null ? 0 : match.hashCode());
         result = 31 * result + (method == null ? 0 : method.hashCode());
-        result = 31 * result + (schemaref == null ? 0 : schemaref.hashCode());
+        result = 31 * result + (schema == null ? 0 : schema.hashCode());
         return result;
     }
 
@@ -127,8 +127,8 @@ public class Request implements Cloneable, Serializable, RequestLike {
             else if (!match.equals(other.getMatch())) { s.add("match"); }
             if (method == null) { if (other == null || other.hasMethod()) { s.add("method"); } }
             else if (!method.equals(other.getMethod())) { s.add("method"); }
-            if (schemaref == null) { if (other == null || other.hasSchemaref()) { s.add("schemaref"); } }
-            else if (!schemaref.equals(other.getSchemaref())) { s.add("schemaref"); }
+            if (schema == null) { if (other == null || other.hasSchema()) { s.add("schema"); } }
+            else if (!schema.equals(other.getSchema())) { s.add("schema"); }
             return s;
     }
 
