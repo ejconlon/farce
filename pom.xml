@@ -42,7 +42,7 @@
         <profile>
             <id>profile-genschemas</id>
             <activation>
-                <file><exists>/bin/bash</exists></file>
+                <file><missing>src/main/java/net/exathunk/farce/genschema</missing></file>
             </activation>
             <build>
                 <plugins>

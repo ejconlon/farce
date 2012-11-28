@@ -18,8 +18,9 @@ import java.util.Set;
 /**
  * charolastra 11/27/12 2:54 PM
  */
-public class RunReader {
-    public static void main(String[] args) throws IOException, TypeException {
+public class Reader {
+
+    public static void runReader() throws IOException, TypeException {
         Session session = Session.loadDefaultSession();
 
         // TODO unfk
