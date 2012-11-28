@@ -11,13 +11,17 @@
     },
 
     "request": {
-      "$ref": "http://exathunk.net/farce/schemas/request"
+      "type": "string",
+      "format": "uri",
+      "$instance": "http://exathunk.net/farce/schemas/request"
     },
 
     "responses": {
       "type": "array",
       "items": {
-        "$ref": "http://exathunk.net/farce/schemas/response"
+        "type": "string",
+        "format": "uri",
+        "$instance": "http://exathunk.net/farce/schemas/response"
       }
     }
   }

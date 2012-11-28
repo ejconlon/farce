@@ -1,0 +1,9 @@
+{
+  "code": 201,
+  "headers": {
+    "Location" : {
+      "templateString": "{{location}}",
+      "schema": "http://exathunk.net/farce/schemas/location"
+    }
+  }
+}

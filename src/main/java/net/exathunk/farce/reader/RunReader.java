@@ -6,7 +6,7 @@ import net.exathunk.jsubschema.base.TypeException;
 import net.exathunk.jsubschema.gen.Loader;
 import net.exathunk.jsubschema.genschema.schema.SchemaFactory;
 import net.exathunk.jsubschema.genschema.schema.SchemaLike;
-import net.exathunk.jsubschema.validation.DefaultValidator;
+import net.exathunk.jsubschema.validation.InstanceValidator;
 import net.exathunk.jsubschema.validation.VContext;
 import net.exathunk.jsubschema.validation.VError;
 import net.exathunk.jsubschema.validation.Validator;
@@ -27,17 +27,13 @@ public class RunReader {
         SchemaLike schemaSchema = Util.quickBind(schemaNode, new SchemaFactory());
         session.addSchema(schemaSchema);
 
-        Validator validator = new DefaultValidator();
-        runReader(session, validator);
-
-        // Now add /instances/schema to session and validate $refs
-        for (String instance : Loader.listFiles("/instances/schema")) {
-            JsonNode node = Loader.loadNode("/instances/schema/"+instance);
-            SchemaLike schema = Util.quickBind(node, new SchemaFactory());
-            session.addSchema(schema);
+        VContext context = session.validate();
+        if (!context.errors.isEmpty()) {
+            VError.throwAll(context.errors);
         }
 
-        runReader(session, new RefValidator());
+        Validator validator = new InstanceValidator();
+        runReader(session, validator);
     }
 
     private static void runReader(Session session, Validator validator) throws IOException, TypeException {

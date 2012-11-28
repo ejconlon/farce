@@ -7,7 +7,8 @@
 
   "properties": {
     "method": {
-      "type": "string"
+      "type": "string",
+      "stringEnum": ["GET", "POST", "PUT", "DELETE", "PATCH"]
     },
 
     "match": {
@@ -18,8 +19,10 @@
       "$ref": "http://exathunk.net/farce/schemas/headers"
     },
 
-    "schema": {
-      "$ref": "http://exathunk.net/schemas/schema"
+    "schema" : {
+      "type": "string",
+      "format": "uri",
+      "$instance": "http://exathunk.net/schemas/schema"
     }
   }
 }

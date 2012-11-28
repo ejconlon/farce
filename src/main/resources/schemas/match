@@ -3,11 +3,12 @@
   "id": "http://exathunk.net/farce/schemas/match",
   "type": "object",
 
-  "required": ["path"],
+  "required": ["template"],
 
   "properties": {
-    "path": {
-      "type": "string"
+    "templateString": {
+      "type": "string",
+      "format": "mustache"
     },
 
     "substitutions": {
@@ -18,7 +19,9 @@
     },
 
     "schema" : {
-      "$ref": "http://exathunk.net/schemas/schema"
+      "type": "string",
+      "format": "uri",
+      "$instance": "http://exathunk.net/schemas/schema"
     }
   }
 }

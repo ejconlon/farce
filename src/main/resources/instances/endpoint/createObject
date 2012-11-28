@@ -1,50 +1,10 @@
 {
   "description": "Create an object",
 
-  "request": {
-    "method": "POST",
-    "match": {
-      "path": "/1/classes/<className>",
-      "schema": {
-        "$ref" : "http://exathunk.net/farce/instances/schema/className"
-      }
-    },
-    "headers": {
-      "Content-Type": {
-        "path": "application/json"
-      },
-      "X-Parse-Application-Id" : {
-        "path": "<applicationId>",
-        "schema": {
-          "$ref" : "http://exathunk.net/farce/instances/schema/applicationId"
-        }
-      },
-      "X-Parse-REST-API-Key": {
-        "path": "<restApiKey>",
-        "schema": {
-          "$ref" : "http://exathunk.net/farce/instances/schema/restApiKey"
-        }
-      }
-    },
-    "schema": {
-      "$ref": "http://exathunk.net/schemas/schema"
-    }
-  },
+  "request": "http://exathunk.net/farce/instances/request/createObject",
 
   "responses": [
-    {
-      "code": 201,
-      "headers": {
-        "Location" : {
-          "path": "<location>",
-          "schema": {
-            "$ref" : "http://exathunk.net/farce/instances/schema/location"
-          }
-        }
-      }
-    },
-    {
-      "code": 500
-    }
+    "http://exathunk.net/farce/instances/response/createObject",
+    "http://exathunk.net/farce/instances/response/internalError"
   ]
 }

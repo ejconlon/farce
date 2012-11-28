@@ -1,9 +1,9 @@
 {
   "$schema": "http://exathunk.net/schemas/schema",
-  "id": "http://exathunk.net/farce/instances/schema/className",
+  "id": "http://exathunk.net/farce/schemas/applicationId",
   "type": "object",
   "properties" : {
-    "className": {
+    "applicationId": {
       "type": "string"
     }
   }

@@ -1,9 +1,9 @@
 {
   "$schema": "http://exathunk.net/schemas/schema",
-  "id": "http://exathunk.net/farce/instances/schema/applicationId",
+  "id": "http://exathunk.net/farce/schemas/restApiKey",
   "type": "object",
   "properties" : {
-    "applicationId": {
+    "restApiKey": {
       "type": "string"
     }
   }

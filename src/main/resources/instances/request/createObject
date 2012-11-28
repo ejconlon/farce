@@ -1,0 +1,21 @@
+{
+    "method": "POST",
+    "match": {
+      "templateString": "/1/classes/{{className}}",
+      "schema": "http://exathunk.net/farce/schemas/className"
+    },
+    "headers": {
+      "Content-Type": {
+        "templateString": "application/json"
+      },
+      "X-Parse-Application-Id" : {
+        "templateString": "{{applicationId}}",
+        "schema": "http://exathunk.net/farce/schemas/applicationId"
+      },
+      "X-Parse-REST-API-Key": {
+        "templateString": "{{restApiKey}}",
+        "schema": "http://exathunk.net/farce/schemas/restApiKey"
+      }
+    },
+    "schema": "http://exathunk.net/schemas/schema"
+  }
