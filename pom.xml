@@ -66,9 +66,6 @@
                                             <arg value="net.exathunk.jsubschema.genschema.schema.Schema"/>
                                             <arg value="net.exathunk.jsubschema.genschema.schema.SchemaLike"/>
                                         </exec>
-                                        <delete>
-                                            <fileset dir="src/main/java/net/exathunk/farce/genschema"/>
-                                        </delete>
                                         <copy todir="src/main/java/net/exathunk/farce/genschema">
                                             <fileset dir="target/generated-sources/gen-javabean/net/exathunk/farce/genschema"/>
                                         </copy>

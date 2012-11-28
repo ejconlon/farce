@@ -24,15 +24,6 @@ public interface RequestLike {
     @JsonDeserialize(as = Headers.class)
     void setHeaders(HeadersLike headers);
 
-    boolean hasMatch();
-
-    @JsonProperty("match")
-    MatchLike getMatch();
-
-    @JsonProperty("match")
-    @JsonDeserialize(as = Match.class)
-    void setMatch(MatchLike match);
-
     boolean hasMethod();
 
     @JsonProperty("method")
@@ -40,6 +31,15 @@ public interface RequestLike {
 
     @JsonProperty("method")
     void setMethod(String method);
+
+    boolean hasPath();
+
+    @JsonProperty("path")
+    MatchLike getPath();
+
+    @JsonProperty("path")
+    @JsonDeserialize(as = Match.class)
+    void setPath(MatchLike path);
 
     boolean hasSchema();
 

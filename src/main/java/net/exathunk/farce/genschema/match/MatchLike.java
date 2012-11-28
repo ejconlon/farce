@@ -1,7 +1,6 @@
 package net.exathunk.farce.genschema.match;
 
 import java.io.Serializable;
-import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import net.exathunk.jsubschema.genschema.schema.Schema;
@@ -19,14 +18,6 @@ public interface MatchLike {
 
     @JsonProperty("schema")
     void setSchema(String schema);
-
-    boolean hasSubstitutions();
-
-    @JsonProperty("substitutions")
-    Map<String, String> getSubstitutions();
-
-    @JsonProperty("substitutions")
-    void setSubstitutions(Map<String, String> substitutions);
 
     boolean hasTemplateString();
 
