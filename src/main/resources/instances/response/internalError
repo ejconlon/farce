@@ -1,3 +1,4 @@
 {
-  "code": 500
+  "code": 500,
+  "schema": "http://exathunk.net/farce/schemas/error"
 }

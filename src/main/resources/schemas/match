@@ -11,13 +11,6 @@
       "format": "mustache"
     },
 
-    "substitutions": {
-      "type": "object",
-      "items": {
-        "type": "string"
-      }
-    },
-
     "schema" : {
       "type": "string",
       "format": "uri",

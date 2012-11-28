@@ -1,0 +1,13 @@
+{
+  "$schema": "http://exathunk.net/schemas/schema",
+  "id": "http://exathunk.net/farce/schemas/error",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type" : "string"
+    },
+    "data": {
+      "$ref": "http://exathunk.net/farce/schemas/match"
+    }
+  }
+}

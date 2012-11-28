@@ -1,6 +1,6 @@
 {
     "method": "POST",
-    "match": {
+    "path": {
       "templateString": "/1/classes/{{className}}",
       "schema": "http://exathunk.net/farce/schemas/className"
     },

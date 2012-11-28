@@ -5,6 +5,6 @@ package net.exathunk.farce.writer;
  */
 public class Writer {
     public static void runWriter() {
-
+        //
     }
 }

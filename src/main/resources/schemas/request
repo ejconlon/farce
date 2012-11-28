@@ -11,7 +11,7 @@
       "stringEnum": ["GET", "POST", "PUT", "DELETE", "PATCH"]
     },
 
-    "match": {
+    "path": {
       "$ref": "http://exathunk.net/farce/schemas/match"
     },
 
