@@ -44,10 +44,9 @@ public interface RequestLike {
     boolean hasSchema();
 
     @JsonProperty("schema")
-    SchemaLike getSchema();
+    String getSchema();
 
     @JsonProperty("schema")
-    @JsonDeserialize(as = Schema.class)
-    void setSchema(SchemaLike schema);
+    void setSchema(String schema);
 
 }

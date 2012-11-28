@@ -4,10 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
-import net.exathunk.farce.genschema.request.Request;
-import net.exathunk.farce.genschema.request.RequestLike;
-import net.exathunk.farce.genschema.response.Response;
-import net.exathunk.farce.genschema.response.ResponseLike;
 import net.exathunk.jsubschema.genschema.schema.Schema;
 import net.exathunk.jsubschema.genschema.schema.SchemaLike;
 import org.codehaus.jackson.annotate.JsonProperty;
@@ -27,19 +23,17 @@ public interface EndpointLike {
     boolean hasRequest();
 
     @JsonProperty("request")
-    RequestLike getRequest();
+    String getRequest();
 
     @JsonProperty("request")
-    @JsonDeserialize(as = Request.class)
-    void setRequest(RequestLike request);
+    void setRequest(String request);
 
     boolean hasResponses();
 
     @JsonProperty("responses")
-    List<ResponseLike> getResponses();
+    List<String> getResponses();
 
     @JsonProperty("responses")
-    @JsonDeserialize(contentAs = Response.class)
-    void setResponses(List<ResponseLike> responses);
+    void setResponses(List<String> responses);
 
 }

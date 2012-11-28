@@ -14,7 +14,7 @@ public class Response implements Cloneable, Serializable, ResponseLike {
 
     private HeadersLike headers;
 
-    private SchemaLike schema;
+    private String schema;
 
     @Override
     public boolean hasCode() {
@@ -52,12 +52,12 @@ public class Response implements Cloneable, Serializable, ResponseLike {
     }
 
     @Override
-    public SchemaLike getSchema() {
+    public String getSchema() {
         return schema;
     }
 
     @Override
-    public void setSchema(SchemaLike schema) {
+    public void setSchema(String schema) {
         this.schema = schema;
     }
 

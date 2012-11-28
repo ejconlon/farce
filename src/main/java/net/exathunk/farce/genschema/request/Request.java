@@ -1,12 +1,14 @@
 package net.exathunk.farce.genschema.request;
 
-import net.exathunk.farce.genschema.headers.HeadersLike;
-import net.exathunk.farce.genschema.match.MatchLike;
-import net.exathunk.jsubschema.genschema.schema.SchemaLike;
-
 import java.io.Serializable;
 import java.util.Set;
 import java.util.TreeSet;
+import net.exathunk.farce.genschema.headers.Headers;
+import net.exathunk.farce.genschema.headers.HeadersLike;
+import net.exathunk.farce.genschema.match.Match;
+import net.exathunk.farce.genschema.match.MatchLike;
+import net.exathunk.jsubschema.genschema.schema.Schema;
+import net.exathunk.jsubschema.genschema.schema.SchemaLike;
 
 public class Request implements Cloneable, Serializable, RequestLike {
 
@@ -16,7 +18,7 @@ public class Request implements Cloneable, Serializable, RequestLike {
 
     private String method;
 
-    private SchemaLike schema;
+    private String schema;
 
     @Override
     public boolean hasHeaders() {
@@ -69,12 +71,12 @@ public class Request implements Cloneable, Serializable, RequestLike {
     }
 
     @Override
-    public SchemaLike getSchema() {
+    public String getSchema() {
         return schema;
     }
 
     @Override
-    public void setSchema(SchemaLike schema) {
+    public void setSchema(String schema) {
         this.schema = schema;
     }
 

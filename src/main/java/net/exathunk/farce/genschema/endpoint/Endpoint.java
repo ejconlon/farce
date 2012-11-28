@@ -4,10 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
-import net.exathunk.farce.genschema.request.Request;
-import net.exathunk.farce.genschema.request.RequestLike;
-import net.exathunk.farce.genschema.response.Response;
-import net.exathunk.farce.genschema.response.ResponseLike;
 import net.exathunk.jsubschema.genschema.schema.Schema;
 import net.exathunk.jsubschema.genschema.schema.SchemaLike;
 
@@ -15,9 +11,9 @@ public class Endpoint implements Cloneable, Serializable, EndpointLike {
 
     private String description;
 
-    private RequestLike request;
+    private String request;
 
-    private List<ResponseLike> responses;
+    private List<String> responses;
 
     @Override
     public boolean hasDescription() {
@@ -40,12 +36,12 @@ public class Endpoint implements Cloneable, Serializable, EndpointLike {
     }
 
     @Override
-    public RequestLike getRequest() {
+    public String getRequest() {
         return request;
     }
 
     @Override
-    public void setRequest(RequestLike request) {
+    public void setRequest(String request) {
         this.request = request;
     }
 
@@ -55,12 +51,12 @@ public class Endpoint implements Cloneable, Serializable, EndpointLike {
     }
 
     @Override
-    public List<ResponseLike> getResponses() {
+    public List<String> getResponses() {
         return responses;
     }
 
     @Override
-    public void setResponses(List<ResponseLike> responses) {
+    public void setResponses(List<String> responses) {
         this.responses = responses;
     }
 

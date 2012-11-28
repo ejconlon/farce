@@ -12,22 +12,13 @@ import org.codehaus.jackson.map.annotate.JsonDeserialize;
 @JsonDeserialize(as = Match.class)
 public interface MatchLike {
 
-    boolean hasPath();
-
-    @JsonProperty("path")
-    String getPath();
-
-    @JsonProperty("path")
-    void setPath(String path);
-
     boolean hasSchema();
 
     @JsonProperty("schema")
-    SchemaLike getSchema();
+    String getSchema();
 
     @JsonProperty("schema")
-    @JsonDeserialize(as = Schema.class)
-    void setSchema(SchemaLike schema);
+    void setSchema(String schema);
 
     boolean hasSubstitutions();
 
@@ -36,5 +27,13 @@ public interface MatchLike {
 
     @JsonProperty("substitutions")
     void setSubstitutions(Map<String, String> substitutions);
+
+    boolean hasTemplateString();
+
+    @JsonProperty("templateString")
+    String getTemplateString();
+
+    @JsonProperty("templateString")
+    void setTemplateString(String templateString);
 
 }

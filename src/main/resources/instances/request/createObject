@@ -10,11 +10,11 @@
       },
       "X-Parse-Application-Id" : {
         "templateString": "{{applicationId}}",
-        "schema": "http://exathunk.net/farce/schemas/applicationId"
+        "schema": "http://exathunk.net/farce/schemas/applicationKeys"
       },
       "X-Parse-REST-API-Key": {
         "templateString": "{{restApiKey}}",
-        "schema": "http://exathunk.net/farce/schemas/restApiKey"
+        "schema": "http://exathunk.net/farce/schemas/applicationKeys"
       }
     },
     "schema": "http://exathunk.net/schemas/schema"
