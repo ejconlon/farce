@@ -63,6 +63,8 @@
                                             <arg value="src/main/resources/schemas"/>
                                             <arg value="target/generated-sources/gen-javabean"/>
                                             <arg value="net.exathunk.farce.genschema"/>
+                                            <arg value="net.exathunk.jsubschema.genschema.schema.Schema"/>
+                                            <arg value="net.exathunk.jsubschema.genschema.schema.SchemaLike"/>
                                         </exec>
                                         <delete>
                                             <fileset dir="src/main/java/net/exathunk/farce/genschema"/>

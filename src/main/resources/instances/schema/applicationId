@@ -1,5 +1,6 @@
 {
   "$schema": "http://exathunk.net/schemas/schema",
+  "id": "http://exathunk.net/farce/instances/schema/applicationId",
   "type": "object",
   "properties" : {
     "applicationId": {

@@ -10,10 +10,19 @@
       }
     },
     "headers": {
+      "Content-Type": {
+        "path": "application/json"
+      },
       "X-Parse-Application-Id" : {
         "path": "<applicationId>",
         "schema": {
           "$ref" : "http://exathunk.net/farce/instances/schema/applicationId"
+        }
+      },
+      "X-Parse-REST-API-Key": {
+        "path": "<restApiKey>",
+        "schema": {
+          "$ref" : "http://exathunk.net/farce/instances/schema/restApiKey"
         }
       }
     },

@@ -5,8 +5,8 @@ import java.util.Set;
 import java.util.TreeSet;
 import net.exathunk.farce.genschema.headers.Headers;
 import net.exathunk.farce.genschema.headers.HeadersLike;
-import net.exathunk.farce.genschema.schema.Schema;
-import net.exathunk.farce.genschema.schema.SchemaLike;
+import net.exathunk.jsubschema.genschema.schema.Schema;
+import net.exathunk.jsubschema.genschema.schema.SchemaLike;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonDeserialize;
 

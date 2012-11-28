@@ -8,6 +8,8 @@ import net.exathunk.farce.genschema.request.Request;
 import net.exathunk.farce.genschema.request.RequestLike;
 import net.exathunk.farce.genschema.response.Response;
 import net.exathunk.farce.genschema.response.ResponseLike;
+import net.exathunk.jsubschema.genschema.schema.Schema;
+import net.exathunk.jsubschema.genschema.schema.SchemaLike;
 
 public class Endpoint implements Cloneable, Serializable, EndpointLike {
 
