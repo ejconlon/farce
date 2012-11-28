@@ -32,8 +32,20 @@ public class RunReader {
             VError.throwAll(context.errors);
         }
 
-        Validator validator = new InstanceValidator();
-        runReader(session, validator);
+        // run all the normal validations
+        {
+          Validator validator = new InstanceValidator();
+          runReader(session, validator);
+        }
+
+        // now validate late refs
+        {
+            LateRefResolver lateRefResolver = new MultiLateRefResolver(Util.asList(
+                    new LoaderLateRefResolver("http://exathunk.net/farce"),
+                    new SingleLateRefResolver("http://exathunk.net/schemas/schema", Loader.loadNode("/nonlocal/schema"))));
+            Validator validator = new LateRefValidator(session, lateRefResolver, new InstanceValidator());
+            runReader(session, validator);
+        }
     }
 
     private static void runReader(Session session, Validator validator) throws IOException, TypeException {
